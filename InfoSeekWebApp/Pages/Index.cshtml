@@ -1,0 +1,268 @@
+﻿@page
+@model InfoSeeKWebApp.Pages.IndexModel
+
+@{
+    Layout = null;
+}
+
+@using Microsoft.AspNetCore.Html
+@using Nest
+@using Newtonsoft.Json
+
+@functions {
+    private List<MatchResult> matches = new List<MatchResult>();
+
+    [FromQuery(Name = "search")]
+    public string Search { get; set; } = string.Empty;
+
+    public List<NewsArticle> NewsArticles { get; set; } = new List<NewsArticle>();
+
+    public async Task OnGet()
+    {
+        if (!string.IsNullOrEmpty(Search))
+        {
+            var settings = new ConnectionSettings(new Uri("http://localhost:9200")).DefaultIndex("example-pages");
+            var client = new ElasticClient(settings);
+            var result = await client.SearchAsync<IndexedPage>(s => s
+                    .Query(q => q
+                        .Bool(b =>
+                            b.Should(
+                                bs => bs.Match(m => m.Field(f => f.Contents).Query(Search)),
+                                bs => bs.Match(m => m.Field(f => f.Headers).Query(Search)),
+                                bs => bs.Match(m => m.Field(f => f.Title).Query(Search)),
+                                bs => bs.Match(m => m.Field(f => f.Description).Query(Search))
+                            )
+                         )
+                    )
+                    .Highlight(h => h.Fields(f => f.Field("*").PreTags("<strong>").PostTags("</strong>")))
+                );
+
+            foreach (var hit in result.Hits.OrderByDescending(hit => hit.Score).DistinctBy(hit => hit.Source.Url))
+            {
+                var highlight = "";
+                foreach (var field in hit.Highlight)
+                {
+                    foreach (var value in field.Value)
+                    {
+                        if (highlight != "")
+                        {
+                            highlight += " ... ";
+                        }
+
+                        highlight += value;
+                    }
+                }
+
+                matches.Add(new MatchResult(hit.Source.Title!, hit.Source.Url!, new HtmlString(highlight)));
+            }
+        }
+        else
+        {
+            using (var httpClient = new HttpClient())
+            {
+                var response = await httpClient.GetStringAsync("https://newsapi.org/v2/everything?q=Apple&from=2024-07-18&sortBy=popularity&apiKey=2f90734a728f49dbb2ebf51cb3045602");
+                var newsApiResponse = JsonConvert.DeserializeObject<NewsApiResponse>(response);
+                NewsArticles = newsApiResponse?.Articles ?? new List<NewsArticle>();
+            }
+        }
+    }
+
+    public class MatchResult
+    {
+        public string Title { get; set; }
+        public string Url { get; set; }
+        public HtmlString Highlight { get; set; }
+
+        public MatchResult(string title, string url, HtmlString highlight)
+        {
+            Title = title;
+            Url = url;
+            Highlight = highlight;
+        }
+    }
+
+    public class NewsArticle
+    {
+        public string Title { get; set; } = string.Empty;
+        public string Url { get; set; } = string.Empty;
+        public string UrlToImage { get; set; } = string.Empty;
+        public string Description { get; set; } = string.Empty;
+    }
+
+    public class NewsApiResponse
+    {
+        public List<NewsArticle> Articles { get; set; }
+    }
+
+    [ElasticsearchType(IdProperty = nameof(Url))]
+    public class IndexedPage
+    {
+        [Keyword]
+        public string Url { get; set; } = string.Empty;
+        [Text]
+        public IEnumerable<string> Contents { get; set; } = new List<string>();
+        [Text]
+        public IEnumerable<string> Headers { get; set; } = new List<string>();
+        [Text]
+        public string Title { get; set; } = string.Empty;
+        [Text]
+        public string Description { get; set; } = string.Empty;
+    }
+}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfoSeeK</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true">
+    
+    <!-- Firebase App (la base de todos los SDKs de Firebase) -->
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <!-- Firebase Authentication -->
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+    <script type="module" src="~/js/firebase-config.js"></script>
+    <script type="module" src="~/js/main.js"></script>
+    <script type="module">
+        import { setupSearchFormListener } from './js/saveSearch.js';
+        setupSearchFormListener();
+    </script>
+</head>
+<body>
+    <header style="position: relative;">
+        <div class="icon-container">
+            <img src="/css/icons/user.png" alt="Configuración" class="icon" onclick="openModal('configModal')">
+        </div>
+        <!-- Modal de Configuración -->
+        <div id="configModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('configModal')">&times;</span>
+                
+                <!-- Sección de perfil -->
+                <div id="profile-section" style="display:none;">
+                    <div class="profile-info">
+                        <img id="profile-photo" src="" alt="Foto de perfil" class="profile-photo">
+                        <h3 id="user-name"></h3>
+                        <p id="user-email"></p>
+                    </div>
+                    <hr>
+                    <div class="settings-options">
+                        <button onclick="openSettings()"><img src="/css/icons/Conf.png" alt="Configuración"> Configuración </button>
+                        <button onclick="location.href='@Url.Page("/Historial")'">
+    <img src="/css/icons/historial.png" alt="Historial"> Historial
+</button>
+
+
+                        <button onclick="logout()"><img src="/css/icons/logout.png" alt="Cerrar sesión"> Cerrar sesión </button>
+                    </div>
+                </div>
+                
+                <!-- Opciones de autenticación -->
+                <div id="auth-options" style="display:block;">
+                    <h2>Configuración de la Cuenta</h2>
+                    <button onclick="openGoogleAuth()">Iniciar sesión con Google</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="logo-search">
+            <img src="/images/infoseek.png" asp-append-version="true" class="logo"/>
+            <form method="get" asp-page="/Results" id="searchForm">
+                <div class="searchbox">
+                    <input type="search" id="searchInput" name="search" placeholder="Palabra clave" value="@Model.Search" />
+                    <button type="submit">🔍</button>
+                </div>
+            </form>
+        </section>
+        
+        @if (!string.IsNullOrEmpty(Model.Search))
+        {
+            <section class="tabs">
+                <ul>
+                    <li><a asp-page="/Index">Todo</a></li>
+                    <li><a href="#">Imágenes</a></li>
+                    <li><a href="#">Videos</a></li>
+                </ul>
+            </section>
+            <section class="results">
+                <ol>
+                    @foreach (var match in Model.Matches)
+                    {
+                        <li class="result">
+                            <h2 class="result_title"><a href="@match.Url" target="_blank">@match.Title</a></h2>
+                            <div class="result_attribution">
+                                <cite>@match.Url</cite>
+                            </div>
+                            <p>@match.Highlight</p>
+                        </li>
+                    }
+                </ol>
+            </section>
+        }
+        else
+        {
+            <section class="news-section">
+                <article>
+                    <h1>Noticias</h1>
+                </article>
+            </section>
+            <section class="content">
+                <div class="container">
+                    <header>
+                        <nav class="icon-nav">
+                            <div class="icon-item" onclick="buscar('Tecnología')">
+                                <img src="/css/icons/technology.png" alt="Tecnología">
+                                <p>Tecnología</p>
+                            </div>
+                            <div class="icon-item" onclick="buscar('programación')">
+                                <img src="/css/icons/programming.png" alt="Programación">
+                                <p>Programación</p>
+                            </div>
+                            <div class="icon-item" onclick="buscar('deportes')">
+                                <img src="/css/icons/sports.png" alt="Deportes">
+                                <p>Deportes</p>
+                            </div>
+                            <div class="icon-item" onclick="buscar('economía')">
+                                <img src="/css/icons/economy.png" alt="Economía">
+                                <p>Economía</p>
+                            </div>
+                            <div class="icon-item" onclick="buscar('educación')">
+                                <img src="/css/icons/education.png" alt="Educación">
+                                <p>Educación</p>
+                            </div>
+                        </nav>
+                        <div class="busqueda">
+                            <input type="text" placeholder="Busca noticias y más" id="busqueda">
+                            <button onclick="buscarTema()">
+                                <img src="/css/icons/search.png" alt="Buscar" class="search-icon">
+                            </button>
+                        </div>
+                    </header>
+                    <div class="container-noticias">
+                        <!-- Noticias se cargarán aquí -->
+                    </div>
+                </div>
+            </section>
+        }
+    </main>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="~/lib/popperjs/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="~/js/app.js"></script>
+    <script type="module" src="~/js/historial.js"></script>
+
+    <footer>
+        <nav>
+            <ul>
+                <li><a asp-page="/Index">Inicio</a></li>
+                <li><a asp-page="/Privacy">Privacidad</a></li>
+                <li><a asp-page="/ayudaysoporte">Ayuda y soporte</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2024 - InfoSeek</p>
+    </footer>
+</body>
+</html>

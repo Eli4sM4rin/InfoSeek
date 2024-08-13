@@ -1,0 +1,233 @@
+/* Privacy.css */
+
+/* Configuración general del cuerpo del documento */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Establece la fuente del texto */
+    background-color: #fff; /* Color de fondo blanco */
+    color: #333; /* Color del texto */
+    margin: 0; /* Elimina el margen por defecto del cuerpo */
+    padding: 0; /* Elimina el relleno por defecto del cuerpo */
+    display: flex; /* Utiliza flexbox para el layout */
+    flex-direction: column; /* Asegura que los elementos hijos se apilen verticalmente */
+    min-height: 100vh; /* La altura mínima es el 100% de la altura de la ventana */
+}
+
+/* Estilo del encabezado */
+header {
+    text-align: center; /* Centra el contenido del encabezado */
+    padding: 20px 0; /* Rellena el espacio en la parte superior e inferior */
+    border-bottom: 1px solid #ccc; /* Añade una línea debajo del encabezado */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    float: left; /* Flota el logo a la izquierda */
+    max-width: 200px; /* Tamaño ajustado del logo */
+    margin-left: 20px; /* Añade un margen izquierdo para separar el logo del borde izquierdo */
+}
+
+/* Estilo principal del contenido */
+main {
+    display: flex; /* Utiliza flexbox para el layout */
+    justify-content: space-between; /* Espacia los elementos de manera uniforme */
+    padding: 0px; /* Reduce el relleno alrededor del contenido */
+    max-width: 1600px; /* Puedes ajustar este valor si es necesario */
+    margin: auto; /* Centra el contenido */
+    flex: 1; /* Permite que el main ocupe todo el espacio disponible */
+    position: relative; /* Establece una posición relativa para el main */
+}
+
+.privacy-content {
+    flex: 2; /* Permite que la sección de contenido ocupe dos partes del espacio disponible */
+    margin-right: 50px; /* Reduce el margen a la derecha para mover el texto hacia la izquierda */
+    overflow-y: auto; /* Permite el desplazamiento vertical */
+    height: 80vh; /* Fija la altura de la sección de contenido */
+    text-align: justify; /* Justifica el texto */
+    padding-left: 0px; /* Añade un relleno a la izquierda para mover el texto hacia la izquierda */
+}
+
+.privacy-content h1 {
+    font-size: 2em; /* Tamaño de fuente del título principal */
+    margin-bottom: 20px; /* Añade un margen en la parte inferior */
+    margin-left: 10px; /* Mueve el título hacia la izquierda */
+}
+
+.privacy-content h2 {
+    font-size: 1.5em; /* Tamaño de fuente del subtítulo */
+    margin-top: 20px; /* Añade un margen en la parte superior */
+    margin-bottom: 10px; /* Añade un margen en la parte inferior */
+    margin-left: 0px; /* Mueve el subtítulo hacia la izquierda */
+}
+
+.privacy-content p, .privacy-content ul {
+    margin-bottom: 15px; /* Añade un margen en la parte inferior */
+    text-align: justify; /* Justifica el texto */
+    margin-left: 0px; /* Mueve el párrafo hacia la izquierda */
+}
+
+.privacy-content ul {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    padding-left: 0; /* Elimina el relleno a la izquierda */
+}
+
+.privacy-content ul li {
+    margin-bottom: 10px; /* Añade un margen en la parte inferior de cada elemento de la lista */
+}
+
+/* Estilo de la imagen */
+.privacy-image {
+    flex: 1; /* Permite que la sección de la imagen ocupe una parte del espacio disponible */
+    display: flex; /* Utiliza flexbox para centrar el contenido */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: flex-start; /* Alinea el contenido al principio del contenedor */
+    position: sticky; /* Permite que la imagen permanezca fija durante el desplazamiento */
+    top: 20px; /* Fija la posición superior de la imagen */
+    margin-left: 30px; /* Añade un margen izquierdo para mover la imagen a la derecha */
+}
+
+.privacy-image img {
+    max-width: 100%; /* Establece el ancho máximo de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-top: 200px; /* Añade un margen superior para bajar la imagen */
+    margin-left: 30px; /* Añade un margen izquierdo para mover la imagen a la derecha dentro de su contenedor */
+}
+
+
+/* Estilo adicional para la navegación en el pie de página */
+footer {
+    background-color: #f8f8f8; /* Color de fondo del pie de página */
+    padding: 20px 0; /* Rellena el espacio en la parte superior e inferior */
+    text-align: center; /* Centra el contenido del pie de página */
+    width: 100%; /* Asegura que el pie de página ocupe todo el ancho de la página */
+    position: relative; /* Posición relativa para el pie de página */
+    bottom: 0; /* Posiciona el pie de página en la parte inferior */
+    left: 0; /* Alinea el pie de página a la izquierda */
+    margin-top: auto; /* Empuja el pie de página hacia abajo si hay espacio adicional */
+
+}
+
+footer nav ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el relleno */
+    display: flex; /* Utiliza flexbox para el layout */
+    justify-content: center; /* Centra el contenido */
+    margin: 0; /* Elimina el margen */
+}
+
+footer nav ul li {
+    margin: 0 10px; /* Añade un margen a los lados de cada elemento de la lista */
+}
+
+footer nav ul li a {
+    text-decoration: none; /* Elimina la decoración del texto (subrayado) */
+    color: #007bff; /* Color del texto */
+}
+
+footer p {
+    font-size: 14px; /* Tamaño de fuente del texto */
+    color: #8d8c8c; /* Color del texto */
+}
+/* Estilo para el contenedor del icono */
+.icon-container {
+    position: absolute;
+    top: 30px; /* Ajusta según el espacio deseado */
+    right: 30px; /* Ajusta según el espacio deseado */
+}
+
+/* Estilo para el icono */
+.icon {
+    width: 60px; /* Tamaño más grande */
+    height: 60px; /* Tamaño más grande */
+    cursor: pointer;
+    vertical-align: middle; /* Ajusta la posición vertical */
+}
+
+/* Estilo para el modal en la parte lateral derecha */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px; /* Ajusta el ancho según sea necesario */
+    height: 50%;
+    background: #ffffff; /* Color de fondo más claro */
+    border-left: 3px solid #a5a5a5; /* Borde izquierdo para más estilo */
+    box-shadow: 0 0 10px rgba(0,0,0,0.2); /* Sombra para darle profundidad */
+    z-index: 1000; /* Asegúrate de que el modal esté encima de otros elementos */
+    border-radius: 8px; /* Bordes redondeados */
+    margin-top: 30px; /* Ajusta este valor para separar el contenido de la parte superior */
+    margin-right: 20px; /* Ajusta el margen derecho para separar del borde derecho */
+}
+
+/* Contenido del modal */
+.modal-content {
+    padding: 20px;
+    background-color: #ffffff; /* Color de fondo suave que complementa el verde del modal */
+    margin: 15px auto; /* Ajusta el margen para centrar el contenido */
+    border: none; /* Elimina el borde para una integración más suave */
+    border-radius: 8px; /* Bordes redondeados para el contenido del modal */
+    margin-top: 30px; /* Ajusta este valor para separar el contenido de la parte superior */
+    margin-right: 20px; /* Ajusta el margen derecho para separar del borde derecho */
+}
+
+/* Estilo para el botón de cerrar */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1100; /* Asegúrate de que el botón de cerrar esté encima del contenido */
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+
+/* Estilo para la foto de perfil */
+.profile-info {
+    text-align: center;
+    margin-bottom: 20px; /* Espacio adicional debajo de la foto */
+}
+
+.profile-photo {
+    border-radius: 50%;
+    width: 120px; /* Tamaño ligeramente más grande */
+    height: 120px; /* Tamaño ligeramente más grande */
+    object-fit: cover;
+}
+
+/* Estilo para botones y opciones */
+.settings-options button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 0px 0;
+    border: 0px solid #ddd; /* Borde ligero */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #ffffff; /* Color de fondo más claro */
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.settings-options button:hover {
+    background-color: #e0e0e0; /* Color de fondo al pasar el ratón */
+    border-color: #ccc; /* Color del borde al pasar el ratón */
+}
+
+.settings-options img {
+    width: 24px; /* Tamaño del icono */
+    height: 24px; /* Tamaño del icono */
+    margin-right: 10px; /* Espacio entre el icono y el texto */
+}
+
+/* Ajustes para el perfil y opciones */
+#profile-section {
+    display: block;
+}

@@ -1,0 +1,277 @@
+@page
+@model InfoSeeKWebApp.Pages.ayudaysoporteModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayuda y Soporte</title>
+    <link rel="stylesheet" href="~/css/Ayuda.css" asp-append-version="true">
+    <!-- Firebase App (la base de todos los SDKs de Firebase) -->
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <!-- Firebase Authentication -->
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+    <script type="module" src="~/js/firebase-config.js"></script>
+    <script type="module" src="~/js/main.js"></script>
+</head>
+<body>
+<header style="position: relative;">
+    <img src="/images/infoseekr.png" alt="InfoSeek Logo" class="logo">
+    <div class="icon-container">
+        <img src="/css/icons/user.png" alt="Configuración" class="icon" onclick="openModal('configModal')">
+    </div>
+</header>
+
+<!-- Modal de Configuración -->
+<div id="configModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('configModal')">&times;</span>
+        
+        <!-- Sección de perfil -->
+        <div id="profile-section" style="display:none;">
+            <div class="profile-info">
+                <img id="profile-photo" src="" alt="Foto de perfil" class="profile-photo">
+                <h3 id="user-name"></h3>
+                <p id="user-email"></p>
+            </div>
+            <hr>
+            <div class="settings-options">
+                <button onclick="openSettings()"><img src="/css/icons/Conf.png" alt="Configuración"> Configuración </button>
+                <button onclick="openHistory()"><img src="/css/icons/historial.png" alt="Historial"> Historial </button>
+                <button onclick="logout()"><img src="/css/icons/logout.png" alt="Cerrar sesión"> Cerrar sesión </button>
+            </div>
+        </div>
+        
+        <!-- Opciones de autenticación -->
+        <div id="auth-options" style="display:block;">
+            <h2>Configuración de la Cuenta</h2>
+            <button onclick="openGoogleAuth()">Iniciar sesión con Google</button>
+        </div>
+    </div>
+</div>
+</header>
+
+    <nav class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="#soporte-content">Soporte</a></li>
+            <li><a href="#documentacion-content">Documentación</a></li>
+            <li><a href="#manual-content">Manual</a></li>
+            <li><a href="#actualizaciones-content">Uso</a></li>
+            <li><a href="#problemas-content">Guías</a></li>
+            <li><a href="#diseño-content">Diseño</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="intro">
+            <div class="intro-item" id="soporte">
+                <img src="/css/icons/support.png" alt="Soporte">
+                <h2>Bienvenido a soporte</h2>
+                <p>Encuentra ayuda y recursos para aprovechar al máximo nuestra aplicación de motor de búsqueda.</p>
+                <a href="#soporte-content">Ir</a>
+            </div>
+            <div class="intro-item" id="documentacion">
+                <img src="/css/icons/documentation.png" alt="Documentación">
+                <h2>Documentación</h2>
+                <p>Accede a información detallada sobre todas las funcionalidades y características.</p>
+                <a href="#documentacion-content">Ir</a>
+            </div>
+            <div class="intro-item" id="manual">
+                <img src="/css/icons/involucrate.png" alt="Manual">
+                <h2>Manual</h2>
+                <p>Guías paso a paso para aprender a utilizar todas las características.</p>
+                <a href="#manual-content">Ir</a>
+            </div>
+        </section>
+
+        <section class="support-categories">
+            <div class="category-item" id="actualizaciones">
+                <h3>Uso - Actualizaciones</h3>
+                <p>Mantente al día con las últimas actualizaciones y mejoras de la aplicación.</p>
+                <a href="#actualizaciones-content">Aprender más</a>
+            </div>
+            <div class="category-item" id="problemas">
+                <h3>Guías – Resolución de problemas</h3>
+                <p>Soluciones a problemas comunes y respuestas a preguntas frecuentes.</p>
+                <a href="#problemas-content">Aprender más</a>
+            </div>
+            <div class="category-item" id="diseño">
+                <h3>Diseño – Temas</h3>
+                <p>Personaliza la apariencia de la aplicación según tus preferencias.</p>
+                <a href="#diseño-content">Aprender más</a>
+            </div>
+        </section>
+        
+<section id="content-sections">
+    <div id="soporte-content">
+        <h2>Soporte</h2>
+        <img src="/images/Ejemplo.png" alt="Ejemplo de Soporte" style="width:100%;height:auto;">
+
+        <h3>Guías de Uso</h3>
+        <p>Encuentra guías detalladas sobre cómo utilizar las principales características de nuestra aplicación. Estas guías están diseñadas para ayudarte a sacar el máximo provecho de nuestras herramientas.</p>
+
+        <h3>Preguntas Frecuentes</h3>
+        <p>Consulta nuestra sección de preguntas frecuentes para resolver rápidamente cualquier duda común que puedas tener.</p>
+
+        <h3>Soporte Técnico en Vivo</h3>
+        <p>Si necesitas asistencia directa, puedes contactar con nuestro equipo de soporte técnico a través de chat en vivo o email. Estamos disponibles para ayudarte con cualquier problema que enfrentes.</p>
+
+        <h3>Comunidad de Usuarios</h3>
+        <p>Únete a nuestra comunidad de usuarios donde puedes compartir tus experiencias, resolver dudas con otros usuarios, y estar al día con las últimas novedades.</p>
+    </div>
+
+    <div id="documentacion-content">
+        <h2>Documentación</h2>
+        <img src="/images/Ejemplo.png" alt="Ejemplo de Documentación" style="width:100%;height:auto;">
+
+        <h3>Introducción</h3>
+        <p>Conoce los fundamentos de nuestra aplicación, incluyendo su arquitectura, las tecnologías utilizadas, y cómo empezar.</p>
+
+        <h3>API y Endpoints</h3>
+        <p>Accede a la documentación completa de nuestra API. Aquí encontrarás detalles sobre todos los endpoints disponibles, cómo interactuar con ellos, y ejemplos de solicitudes y respuestas.</p>
+
+        <h3>Autenticación y Seguridad</h3>
+        <p>Aprende cómo manejar la autenticación en nuestra aplicación, incluyendo el uso de tokens, roles de usuario, y prácticas recomendadas de seguridad.</p>
+
+        <h3>Integraciones</h3>
+        <p>Descubre cómo integrar nuestra aplicación con otros servicios y herramientas, desde CRMs hasta plataformas de marketing y automatización.</p>
+    </div>
+
+    <div id="manual-content">
+        <h2>Manual</h2>
+        <img src="/images/Ejemplo.png" alt="Ejemplo de Manual" style="width:100%;height:auto;">
+
+        <h3>Primeros Pasos</h3>
+        <p>Una guía básica para nuevos usuarios, que cubre desde la creación de una cuenta hasta la configuración inicial.</p>
+
+        <h3>Funciones Avanzadas</h3>
+        <p>Explora funciones avanzadas de la aplicación que pueden optimizar tu experiencia y hacer tu trabajo más eficiente.</p>
+
+        <h3>Atajos y Trucos</h3>
+        <p>Conoce atajos y trucos que pueden acelerar tu trabajo y ayudarte a ser más productivo con nuestra aplicación.</p>
+
+        <h3>Resolución de Problemas</h3>
+        <p>Una sección dedicada a solucionar problemas comunes que puedan surgir durante el uso de la aplicación, desde errores comunes hasta configuraciones complicadas.</p>
+    </div>
+
+    <div id="actualizaciones-content">
+        <h2>Uso - Actualizaciones</h2>
+        <img src="/images/Ejemplo.png" alt="Ejemplo de Actualizaciones" style="width:100%;height:auto;">
+
+        <h3>Últimas Actualizaciones</h3>
+        <p>Mantente informado sobre las últimas actualizaciones de nuestra aplicación, incluyendo nuevas características y mejoras de rendimiento.</p>
+
+        <h3>Notas de la Versión</h3>
+        <p>Consulta las notas de cada versión para ver los cambios específicos, correcciones de errores, y cualquier mejora realizada.</p>
+
+        <h3>Historial de Versiones</h3>
+        <p>Accede a un historial completo de todas las versiones anteriores, con detalles sobre los cambios realizados en cada una.</p>
+
+        <h3>Futuras Actualizaciones</h3>
+        <p>Infórmate sobre las próximas actualizaciones que estamos planeando y participa en encuestas para ayudarnos a priorizar nuevas funciones.</p>
+    </div>
+
+    <div id="problemas-content">
+        <h2>Guías – Resolución de problemas</h2>
+        <img src="/images/Ejemplo.png" alt="Ejemplo de Resolución de Problemas" style="width:100%;height:auto;">
+
+        <h3>Problemas Comunes</h3>
+        <p>Soluciones rápidas a problemas comunes reportados por nuestros usuarios. Encuentra pasos detallados para resolverlos.</p>
+
+        <h3>Errores de Conexión</h3>
+        <p>Guías para solucionar errores de conexión que pueden impedirte acceder a la aplicación o sincronizar tus datos.</p>
+
+        <h3>Recuperación de Cuenta</h3>
+        <p>Pasos a seguir si tienes problemas para acceder a tu cuenta, incluyendo recuperación de contraseñas y verificación de identidad.</p>
+
+        <h3>Soporte Avanzado</h3>
+        <p>En caso de problemas más complejos, consulta nuestras guías avanzadas para soluciones técnicas detalladas.</p>
+    </div>
+
+    <div id="diseño-content">
+        <h2>Diseño – Temas</h2>
+        <img src="/images/Ejemplo.png" alt="Ejemplo de Diseño" style="width:100%;height:auto;">
+
+        <h3>Personalización de Temas</h3>
+        <p>Aprende cómo personalizar el tema de la aplicación según tus preferencias, incluyendo colores, fuentes, y estilo general.</p>
+
+        <h3>Temas Prediseñados</h3>
+        <p>Explora una colección de temas prediseñados que puedes aplicar con un solo clic para cambiar el aspecto de la aplicación.</p>
+
+        <h3>Modo Oscuro y Claro</h3>
+        <p>Guía para alternar entre modo oscuro y claro, y cómo personalizar cada uno para una experiencia visual óptima.</p>
+
+        <h3>Diseño Responsivo</h3>
+        <p>Cómo adaptar la aplicación para un uso óptimo en diferentes dispositivos, desde desktops hasta smartphones.</p>
+    </div>
+</section>
+
+    </main>
+
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="#soporte-content">Soporte</a></li>
+                <li><a href="#documentacion-content">Documentación</a></li>
+                <li><a href="#manual-content">Manual</a></li>
+                <li><a href="#actualizaciones-content">Uso - Actualizaciones</a></li>
+                <li><a href="#problemas-content">Guías – Resolución de problemas</a></li>
+                <li><a href="#diseno-content">Diseño – Temas</a></li>
+            </ul>
+        </nav>
+        <nav>
+            <ul>
+                <li><a asp-page="/Index">Inicio</a></li>
+                <li><a asp-page="/Privacy">Privacidad</a></li>
+                <li><a asp-page="/ayudaysoporte">Ayuda y soporte</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2024 InfoSeeK. Todos los derechos reservados.</p>
+    </footer>
+
+<script>
+    // Mostrar la barra lateral al hacer scroll hacia abajo
+    window.addEventListener('scroll', function() {
+        var sidebar = document.getElementById('sidebar');
+        var scrollPosition = window.scrollY;
+
+        if (scrollPosition > 100) {  // Cambia 100 por el valor donde quieras que aparezca la barra lateral
+            sidebar.classList.add('visible');
+        } else {
+            sidebar.classList.remove('visible');
+        }
+
+        // Cambiar el estilo del elemento activo en la barra lateral
+        document.querySelectorAll('nav.sidebar a').forEach(anchor => {
+            const section = document.querySelector(anchor.getAttribute('href'));
+            if (section) {  // Verifica si section no es null
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+
+                if (scrollPosition >= sectionTop - 50 && scrollPosition < sectionTop + sectionHeight - 50) {
+                    anchor.classList.add('active');
+                } else {
+                    anchor.classList.remove('active');
+                }
+            }
+        });
+    });
+
+    // Agregar la clase 'active' al enlace seleccionado cuando se hace clic
+    document.querySelectorAll('nav.sidebar a').forEach(anchor => {
+        anchor.addEventListener('click', function() {
+            // Remover 'active' de todos los enlaces
+            document.querySelectorAll('nav.sidebar a').forEach(link => link.classList.remove('active'));
+            // Agregar 'active' al enlace clicado
+            anchor.classList.add('active');
+        });
+    });
+</script>
+
+</body>
+</html>

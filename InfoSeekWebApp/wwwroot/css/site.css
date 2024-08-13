@@ -1,0 +1,507 @@
+/* Importación de fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700&display=swap');
+
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat',sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Estilos de encabezado */
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Estilo adicional para la navegación en el pie de página */
+footer {
+    background-color: #f8f9fa;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    margin-top: auto; /* Mantiene el pie de página en la parte inferior */
+}
+
+footer nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+footer nav ul li {
+    margin: 0 10px;
+}
+
+footer nav ul li a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+footer p {
+    font-size: 14px;
+    color: #c2c2c2;
+}
+
+/* Estilos de navegación */
+nav {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+nav span {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 30px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+nav span:hover {
+    color: rgb(248, 0, 124);
+}
+
+/* Estilos de la sección principal */
+main {
+    text-align: center;
+    padding: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #000000;
+    font-family: 'Perpetua', serif;
+}
+h1 {
+    font-size: 45px;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+/* Estilos del buscador principal */
+.logo-search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.logo {
+    max-width: 700px;
+    margin-bottom: 35px;
+}
+
+.searchbox {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    border: 2px solid #ccc;
+    border-radius: 50px;
+    padding: 5px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    
+}
+
+.searchbox input {
+    width: 90%;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 50px 0 0 50px;
+    outline: none;
+    font-size: 18px;
+    transition: box-shadow 0.3s;
+}
+
+.searchbox button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 0 50px 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchbox .search-icon {
+    width: 24px;
+    height: 24px;
+    margin: 0;
+}
+/* Estilos de pestañas */
+.tabs ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.tabs ul li {
+    margin: 0 15px;
+}
+
+.tabs ul li a {
+    text-decoration: none;
+    color: #6a1b9a;
+    font-weight: bold;
+}
+
+/* Estilos de resultados */
+.results {
+    text-align: justify;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.result {
+    padding: 12px 0;
+}
+
+.result_title {
+    font-size: 18px;
+    text-align: left;
+    margin: 0 0 4px;
+}
+
+.result_title a {
+    text-decoration: none;
+    color: #1a0dab;
+}
+
+.result_title a:hover {
+    text-decoration: underline;
+}
+
+.result_attribution {
+    font-size: 14px;
+    color: #006621;
+}
+
+/* Sección de noticias */
+.news-section {
+    text-align: center;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px;
+    padding: 20px;
+    justify-items: center;
+}
+
+.news-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px;
+    text-align: left;
+}
+
+.news-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.news-item h3 {
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+.news-item p {
+    font-size: 0.9em;
+    margin: 8px 0;
+}
+
+.news-item a.btn {
+    background-color: #6a1b9a;
+    color: #fff;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+.news-item a.btn:hover {
+    background-color: #4a148c;
+}
+
+/* Contenedor de noticias */
+.container-noticias {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Cambiar a 4 columnas */
+    grid-gap: 30px;
+    padding-bottom: 20px;
+}
+
+/* Asegúrate de que cada .item se ajuste al tamaño necesario */
+.container-noticias .item {
+    background-color: #fff; /* Fondo blanco */
+    border: 1px solid #e0e0e0; /* Borde sutil */
+    border-radius: 12px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra inicial */
+}
+
+.container-noticias .item:hover {
+    transform: translateY(-10px); /* Efecto de flotación */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada en hover */
+}
+
+.container-noticias .item h2 {
+    margin-bottom: 15px; /* Espaciado debajo del título */
+    font-size: 1.25em; /* Tamaño de fuente del título */
+    color: #333; /* Color del título */
+}
+
+.container-noticias .item:hover h2 {
+    text-decoration: underline;
+}
+
+.container-noticias .item .info_item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Alinear verticalmente */
+    margin-top: 10px;
+    font-size: 0.9em; /* Tamaño de fuente de la información */
+    color: #666; /* Color de la información */
+}
+
+.container-noticias .item img {
+    width: 100%;
+    border-radius: 8px; /* Bordes redondeados para las imágenes */
+}
+
+.container-noticias #btnSiguiente {
+    cursor: pointer;
+    grid-column: span 4; /* Hacer que el botón "Ver más" ocupe toda la fila */
+    text-align: center;
+    padding: 10px 0; /* Espaciado interno */
+    background-color: #ffffff; /* Color de fondo del botón */
+    color: #000000; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Transición de color de fondo */
+}
+
+.container-noticias #btnSiguiente:hover {
+    background-color: #ff90da; /* Color de fondo en hover */
+}
+
+/* Navegación por iconos */
+.icon-nav {
+    display: flex;
+    justify-content: space-around; /* Distribuye los elementos equitativamente */
+    background-color: #fff;
+    padding: 5px; /* Ajusta el padding según lo necesites */
+}
+
+.icon-item {
+    text-align: center; /* Centra el texto y el icono */
+    margin: 0 30px; /* Reduce el margen entre los iconos */
+}
+
+.icon-item img {
+    width: 70px; /* Ajusta el tamaño del icono según tus necesidades */
+    height: 70px; /* Mantén la proporción del icono */
+    display: block;
+    margin: 0 auto; /* Centra el icono horizontalmente */
+}
+
+.icon-item p {
+    margin-top: 5px; /* Espacio entre el icono y el texto */
+    font-size: 20px; /* Ajusta el tamaño del texto */
+    color: #070101; /* Cambia el color del texto según tus preferencias */
+    font-family: Bellefair;
+}
+
+/* Busqueda */
+.busqueda {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Asegura que el botón se posicione dentro del contenedor */
+    margin: -10px 0 20px 0;
+}
+
+.busqueda input {
+    width: 100%;
+    max-width: 850px;
+    padding: 10px 20px; /* Ajusta el padding para el ícono */
+    border: none; /* Elimina todos los bordes */
+    border-bottom: 2px solid #ccc; /* Agrega solo el borde inferior */
+    outline: none;
+    font-size: 18px;
+    padding-right: 40px; /* Espacio para el ícono dentro del campo */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Agrega transición para la sombra */
+    box-shadow: none; /* Sin sombra inicialmente */
+}
+
+.busqueda input:focus {
+    border-bottom-color: #000000; /* Cambia el color del borde inferior al enfocar */
+    box-shadow: 0px 4px 4px -2px rgba(0, 0, 0, 0.3); /* Sombra solo en la parte inferior */
+}
+
+.busqueda button {
+    position: absolute;
+    right: 10px; /* Ajusta el espacio del borde derecho */
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.busqueda .search-icon {
+    width: 30px; /* Ajusta el tamaño del icono */
+    height: 30px;
+    display: block;
+}
+/* Estilo para el contenedor del icono */
+.icon-container {
+    position: absolute;
+    top: 30px; /* Ajusta según el espacio deseado */
+    right: 30px; /* Ajusta según el espacio deseado */
+}
+
+/* Estilo para el icono */
+.icon {
+    width: 60px; /* Tamaño más grande */
+    height: 60px; /* Tamaño más grande */
+    cursor: pointer;
+    vertical-align: middle; /* Ajusta la posición vertical */
+}
+
+/* Estilo para el modal en la parte lateral derecha */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px; /* Ajusta el ancho según sea necesario */
+    height: 50%;
+    background: #ffffff; /* Color de fondo más claro */
+    border-left: 3px solid #a5a5a5; /* Borde izquierdo para más estilo */
+    box-shadow: 0 0 10px rgba(0,0,0,0.2); /* Sombra para darle profundidad */
+    z-index: 1000; /* Asegúrate de que el modal esté encima de otros elementos */
+    border-radius: 8px; /* Bordes redondeados */
+    margin-top: 30px; /* Ajusta este valor para separar el contenido de la parte superior */
+    margin-right: 20px; /* Ajusta el margen derecho para separar del borde derecho */
+}
+
+/* Contenido del modal */
+.modal-content {
+    padding: 20px;
+    background-color: #ffffff; /* Color de fondo suave que complementa el verde del modal */
+    margin: 15px auto; /* Ajusta el margen para centrar el contenido */
+    border: none; /* Elimina el borde para una integración más suave */
+    border-radius: 8px; /* Bordes redondeados para el contenido del modal */
+    margin-top: 30px; /* Ajusta este valor para separar el contenido de la parte superior */
+    margin-right: 20px; /* Ajusta el margen derecho para separar del borde derecho */
+}
+
+/* Estilo para el botón de cerrar */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1100; /* Asegúrate de que el botón de cerrar esté encima del contenido */
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+
+/* Estilo para la foto de perfil */
+.profile-info {
+    text-align: center;
+    margin-bottom: 20px; /* Espacio adicional debajo de la foto */
+}
+
+.profile-photo {
+    border-radius: 50%;
+    width: 120px; /* Tamaño ligeramente más grande */
+    height: 120px; /* Tamaño ligeramente más grande */
+    object-fit: cover;
+}
+
+/* Estilo para botones y opciones */
+.settings-options button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 0px 0;
+    border: 0px solid #ddd; /* Borde ligero */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #ffffff; /* Color de fondo más claro */
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.settings-options button:hover {
+    background-color: #e0e0e0; /* Color de fondo al pasar el ratón */
+    border-color: #ccc; /* Color del borde al pasar el ratón */
+}
+
+.settings-options img {
+    width: 24px; /* Tamaño del icono */
+    height: 24px; /* Tamaño del icono */
+    margin-right: 10px; /* Espacio entre el icono y el texto */
+}
+
+/* Ajustes para el perfil y opciones */
+#profile-section {
+    display: block;
+}

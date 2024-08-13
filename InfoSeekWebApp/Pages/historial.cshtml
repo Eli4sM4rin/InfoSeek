@@ -1,0 +1,104 @@
+@page
+@model historialModel
+@{
+    ViewData["Title"] = "Historial de Búsqueda";
+}
+
+<h2>Historial de Búsqueda</h2>
+<div id="search-history">
+    <!-- Aquí se mostrará el historial -->
+</div>
+
+@section Scripts {
+    <script type="module">
+        import { auth, db, collection, addDoc, query, where, orderBy, getDocs, deleteDoc, doc, serverTimestamp } from './firebase-config.js';
+
+        async function saveSearchQuery(query) {
+            try {
+                const userId = auth.currentUser.uid;
+                await addDoc(collection(db, "searchHistory"), {
+                    userId: userId,
+                    query: query,
+                    timestamp: serverTimestamp()
+                });
+                console.log("Búsqueda guardada en el historial");
+            } catch (error) {
+                console.error("Error guardando la búsqueda: ", error);
+            }
+        }
+
+        async function getUserSearchHistory() {
+            const userId = auth.currentUser.uid;
+            const q = query(collection(db, "searchHistory"), where("userId", "==", userId), orderBy("timestamp", "desc"));
+            const querySnapshot = await getDocs(q);
+
+            let searchHistory = [];
+            querySnapshot.forEach((doc) => {
+                searchHistory.push({ id: doc.id, ...doc.data() });
+            });
+            return searchHistory;
+        }
+
+        async function renderSearchHistory() {
+            const history = await getUserSearchHistory();
+            const historyContainer = document.getElementById("search-history");
+
+            historyContainer.innerHTML = ''; // Limpiar contenido previo
+
+            history.forEach((search) => {
+                const searchElement = document.createElement("div");
+                searchElement.className = "search-item";
+                searchElement.innerHTML = `
+                    <p>Búsqueda: ${search.query}</p>
+                    <p>Fecha: ${new Date(search.timestamp.seconds * 1000).toLocaleString()}</p>
+                    <button onclick="deleteSearchEntry('${search.id}')">Eliminar</button>
+                `;
+                historyContainer.appendChild(searchElement);
+            });
+        }
+
+        async function deleteSearchEntry(docId) {
+            try {
+                await deleteDoc(doc(db, "searchHistory", docId));
+                console.log("Entrada eliminada");
+                renderSearchHistory(); // Actualiza la lista de historial
+            } catch (error) {
+                console.error("Error eliminando la entrada: ", error);
+            }
+        }
+
+        // Renderiza el historial de búsqueda cuando la página se carga
+        document.addEventListener('DOMContentLoaded', renderSearchHistory);
+    </script>
+
+    <style>
+        #search-history {
+            background-color: #1a1a1a;
+            padding: 20px;
+            border-radius: 5px;
+            color: #fff;
+        }
+
+        .search-item {
+            border-bottom: 1px solid #333;
+            padding: 10px 0;
+        }
+
+        .search-item:last-child {
+            border-bottom: none;
+        }
+
+        button {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        button:hover {
+            background-color: #d32f2f;
+        }
+    </style>
+}

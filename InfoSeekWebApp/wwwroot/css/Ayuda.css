@@ -1,0 +1,340 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #ffffff; /* Color blanco para el encabezado */
+    padding: 20px 0;
+    color: #333;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra en la parte inferior */
+    position: relative;
+}
+
+.logo {
+    max-width: 200px; /* Tamaño ajustado del logo */
+    margin-left: 20px; /* Margen izquierdo para separar el logo del borde izquierdo */
+}
+
+main {
+    margin-left: 200px; /* Ajusta el margen izquierdo para hacer espacio para la barra lateral */
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Permite que el main ocupe todo el espacio disponible */
+    max-width: 1200px; /* Aumenta el ancho máximo del main */
+    margin: 20px auto; /* Centra el contenido y añade margen superior e inferior */
+}
+
+/* Centrar los elementos en main */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea los elementos al principio del contenedor */
+}
+
+/* Estilo para la sección intro */
+.intro {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas más pequeñas */
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%; /* Asegura que la sección intro ocupe todo el ancho del contenedor */
+}
+
+.intro-item {
+    flex: 1;
+    padding: 20px;
+    max-width: 350px; /* Limita el ancho máximo de cada ítem */
+    box-sizing: border-box; /* Incluye el padding en el ancho total del elemento */
+    margin: 10px; /* Añade espacio entre los elementos */
+    background-color: #f9f9f9; /* Color de fondo suave para los ítems */
+    border: 1px solid #e0e0e0; /* Borde suave alrededor de los ítems */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+.intro-item img {
+    width: 50px;
+    height: 50px;
+}
+
+.intro-item h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.intro-item p {
+    color: #666;
+}
+
+.intro-item a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #6a1b9a; /* Color morado suave */
+    text-decoration: none;
+}
+
+/* Estilo para la sección support-categories */
+.support-categories {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas más pequeñas */
+    width: 100%; /* Asegura que la sección support-categories ocupe todo el ancho del contenedor */
+}
+
+.category-item {
+    flex: 1;
+    padding: 20px;
+    max-width: 350px; /* Limita el ancho máximo de cada ítem */
+    box-sizing: border-box; /* Incluye el padding en el ancho total del elemento */
+    margin: 10px; /* Añade espacio entre los elementos */
+    background-color: #f9f9f9; /* Color de fondo suave para los ítems */
+    border: 1px solid #e0e0e0; /* Borde suave alrededor de los ítems */
+    border-radius: 8px; /* Bordes redondeados */
+    text-align: center;
+}
+
+.category-item h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.category-item p {
+    color: #666;
+    text-align: center;
+}
+
+.category-item a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #6a1b9a; /* Color morado suave */
+    text-decoration: none;
+    text-align: center;
+}
+
+
+/* Estilo para la barra lateral */
+nav.sidebar {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    width: 200px;
+    padding: 0;
+    height: 80vh;
+    overflow-y: auto;
+    opacity: 0; /* Inicialmente oculto */
+    transform: translateX(-100%);
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transición para la visibilidad */
+}
+
+nav.sidebar.visible {
+    opacity: 1; /* Muestra la barra lateral */
+    transform: translateX(0);
+}
+
+/* Estilo para los elementos del menú en la barra lateral */
+nav.sidebar ul {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+}
+
+nav.sidebar ul li {
+    margin: 10px 0;
+}
+
+nav.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    background-color: #007bff;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+/* Resaltar la opción activa en la barra lateral */
+nav.sidebar ul li a.active {
+    background-color: #6a1b9a; /* Cambia a un color diferente cuando está activo */
+    color: #fff; /* Texto blanco */
+    font-weight: bold; /* Texto en negrita */
+}
+
+/* Agrega una animación de transición al cambio de color */
+nav.sidebar ul li a {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Estilo para la sección de contenido adicional */
+#content-sections {
+    margin: 20px auto; /* Ajusta el margen superior e inferior y centra la sección */
+    max-width: 1200px; /* Aumenta el ancho máximo del contenedor */
+    width: calc(100% - 40px); /* Asegura que el ancho sea igual al de .intro menos los márgenes */
+    box-sizing: border-box; /* Incluye el padding en el ancho total del elemento */
+}
+
+#content-sections h2 {
+    font-size: 2em; /* Tamaño de fuente más grande para los títulos */
+    margin-top: 40px; /* Margen superior mayor */
+    color: #6a1b9a; /* Color morado para los títulos */
+    text-align: center;
+}
+
+#content-sections p {
+    color: #333;
+    line-height: 1.8; /* Línea de altura mayor para mejorar la legibilidad */
+    margin: 15px 0; /* Margen superior e inferior mayor */
+    text-align: center;
+}
+/*Imagenes de lso contenedores
+
+
+
+
+/* Estilo adicional para la navegación en el pie de página */
+footer {
+    background-color: #f8f8f8; /* Color de fondo del pie de página */
+    padding: 20px 0; /* Rellena el espacio en la parte superior e inferior */
+    text-align: center; /* Centra el contenido del pie de página */
+    width: 100%; /* Asegura que el pie de página ocupe todo el ancho de la página */
+    position: relative; /* Posición relativa para el pie de página */
+    bottom: 0; /* Posiciona el pie de página en la parte inferior */
+    left: 0; /* Alinea el pie de página a la izquierda */
+    margin-top: auto; /* Empuja el pie de página hacia abajo si hay espacio adicional */
+
+}
+
+footer nav ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el relleno */
+    display: flex; /* Utiliza flexbox para el layout */
+    justify-content: center; /* Centra el contenido */
+    margin: 0; /* Elimina el margen */
+}
+
+footer nav ul li {
+    margin: 0 10px; /* Añade un margen a los lados de cada elemento de la lista */
+}
+
+footer nav ul li a {
+    text-decoration: none; /* Elimina la decoración del texto (subrayado) */
+    color: #007bff; /* Color del texto */
+}
+
+footer p {
+    font-size: 14px; /* Tamaño de fuente del texto */
+    color: #8d8c8c; /* Color del texto */
+}
+/* Estilo para el contenedor del icono */
+.icon-container {
+    position: absolute;
+    top: 30px; /* Ajusta según el espacio deseado */
+    right: 30px; /* Ajusta según el espacio deseado */
+}
+
+/* Estilo para el icono */
+.icon {
+    width: 60px; /* Tamaño más grande */
+    height: 60px; /* Tamaño más grande */
+    cursor: pointer;
+    vertical-align: middle; /* Ajusta la posición vertical */
+}
+
+/* Estilo para el modal en la parte lateral derecha */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px; /* Ajusta el ancho según sea necesario */
+    height: 50%;
+    background: #ffffff; /* Color de fondo más claro */
+    border-left: 3px solid #a5a5a5; /* Borde izquierdo para más estilo */
+    box-shadow: 0 0 10px rgba(0,0,0,0.2); /* Sombra para darle profundidad */
+    z-index: 1000; /* Asegúrate de que el modal esté encima de otros elementos */
+    border-radius: 8px; /* Bordes redondeados */
+    margin-top: 30px; /* Ajusta este valor para separar el contenido de la parte superior */
+    margin-right: 20px; /* Ajusta el margen derecho para separar del borde derecho */
+}
+
+/* Contenido del modal */
+.modal-content {
+    padding: 20px;
+    background-color: #ffffff; /* Color de fondo suave que complementa el verde del modal */
+    margin: 15px auto; /* Ajusta el margen para centrar el contenido */
+    border: none; /* Elimina el borde para una integración más suave */
+    border-radius: 8px; /* Bordes redondeados para el contenido del modal */
+    margin-top: 30px; /* Ajusta este valor para separar el contenido de la parte superior */
+    margin-right: 20px; /* Ajusta el margen derecho para separar del borde derecho */
+}
+
+/* Estilo para el botón de cerrar */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1100; /* Asegúrate de que el botón de cerrar esté encima del contenido */
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+
+/* Estilo para la foto de perfil */
+.profile-info {
+    text-align: center;
+    margin-bottom: 20px; /* Espacio adicional debajo de la foto */
+}
+
+.profile-photo {
+    border-radius: 50%;
+    width: 120px; /* Tamaño ligeramente más grande */
+    height: 120px; /* Tamaño ligeramente más grande */
+    object-fit: cover;
+}
+
+/* Estilo para botones y opciones */
+.settings-options button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 0px 0;
+    border: 0px solid #ddd; /* Borde ligero */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #ffffff; /* Color de fondo más claro */
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.settings-options button:hover {
+    background-color: #e0e0e0; /* Color de fondo al pasar el ratón */
+    border-color: #ccc; /* Color del borde al pasar el ratón */
+}
+
+.settings-options img {
+    width: 24px; /* Tamaño del icono */
+    height: 24px; /* Tamaño del icono */
+    margin-right: 10px; /* Espacio entre el icono y el texto */
+}
+
+/* Ajustes para el perfil y opciones */
+#profile-section {
+    display: block;
+}

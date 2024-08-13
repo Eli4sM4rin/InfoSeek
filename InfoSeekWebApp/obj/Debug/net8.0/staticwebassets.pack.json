@@ -1,0 +1,369 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\InfoSeeKWebApp.bundle.scp.css",
+      "PackagePath": "staticwebassets\\InfoSeeKWebApp.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\css\\Ayuda.css",
+      "PackagePath": "staticwebassets\\css\\Ayuda.css"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\css\\Privacy.css",
+      "PackagePath": "staticwebassets\\css\\Privacy.css"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\css\\Results.css",
+      "PackagePath": "staticwebassets\\css\\Results.css"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\css\\icons\\Conf.png",
+      "PackagePath": "staticwebassets\\css\\icons\\Conf.png"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\css\\icons\\anterior.png",
+      "PackagePath": "staticwebassets\\css\\icons\\anterior.png"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\css\\icons\\documentation.png",
+      "PackagePath": "staticwebassets\\css\\icons\\documentation.png"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\css\\icons\\economy.png",
+      "PackagePath": "staticwebassets\\css\\icons\\economy.png"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\css\\icons\\education.png",
+      "PackagePath": "staticwebassets\\css\\icons\\education.png"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\css\\icons\\historial.png",
+      "PackagePath": "staticwebassets\\css\\icons\\historial.png"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\css\\icons\\involucrate.png",
+      "PackagePath": "staticwebassets\\css\\icons\\involucrate.png"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\css\\icons\\logout.png",
+      "PackagePath": "staticwebassets\\css\\icons\\logout.png"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\css\\icons\\programming.png",
+      "PackagePath": "staticwebassets\\css\\icons\\programming.png"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\css\\icons\\search.png",
+      "PackagePath": "staticwebassets\\css\\icons\\search.png"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\css\\icons\\siguiente.png",
+      "PackagePath": "staticwebassets\\css\\icons\\siguiente.png"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\css\\icons\\sports.png",
+      "PackagePath": "staticwebassets\\css\\icons\\sports.png"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\css\\icons\\support.png",
+      "PackagePath": "staticwebassets\\css\\icons\\support.png"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\css\\icons\\technology.png",
+      "PackagePath": "staticwebassets\\css\\icons\\technology.png"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\css\\icons\\user.png",
+      "PackagePath": "staticwebassets\\css\\icons\\user.png"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\images\\Ejemplo.png",
+      "PackagePath": "staticwebassets\\images\\Ejemplo.png"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\images\\Privacy.png",
+      "PackagePath": "staticwebassets\\images\\Privacy.png"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\images\\infoseek.png",
+      "PackagePath": "staticwebassets\\images\\infoseek.png"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\images\\infoseekr.png",
+      "PackagePath": "staticwebassets\\images\\infoseekr.png"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\js\\app.js",
+      "PackagePath": "staticwebassets\\js\\app.js"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\js\\firebase-config.js",
+      "PackagePath": "staticwebassets\\js\\firebase-config.js"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\js\\main.js",
+      "PackagePath": "staticwebassets\\js\\main.js"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\js\\server.js",
+      "PackagePath": "staticwebassets\\js\\server.js"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "D:\\Dell\\ProyectoPruebaError\\Proyecto\\InfoSeeKWebApp\\wwwroot\\lib\\popperjs\\popper.min.js",
+      "PackagePath": "staticwebassets\\lib\\popperjs\\popper.min.js"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.InfoSeeKWebApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.InfoSeeKWebApp.props",
+      "PackagePath": "build\\InfoSeeKWebApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.InfoSeeKWebApp.props",
+      "PackagePath": "buildMultiTargeting\\InfoSeeKWebApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.InfoSeeKWebApp.props",
+      "PackagePath": "buildTransitive\\InfoSeeKWebApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,306 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+main {
+    max-width: 90%; /* Ajusta el ancho máximo del contenido principal */
+    margin: 0 auto; /* Centra el contenido principal */
+    padding: 20px;
+    padding: 20px 30px; /* Ajusta el padding para dar más espacio a la derecha */
+    flex-grow: 1;
+}
+
+/* Nueva sección del buscador */
+.logo-search-v2 {
+    margin: 10px 0 10px -10px; /* Menos margen a la izquierda para mover el logo más a la izquierda */
+    padding-top: 10px; /* Reduce el espacio superior para subir el logo y el buscador */
+    overflow: hidden; /* Limpia los flotantes internos */
+    width: calc(100% + 20px); /* Aumenta el ancho del contenedor para que se extienda más allá del borde */
+}
+
+/* Ajusta el logo */
+.logo-search-v2 .logo-v2 {
+    float: left; /* Flota el logo a la izquierda */
+    max-width: 350px; /* Tamaño ajustado del logo */
+    margin-right: 40px; /* Menos separación del logo para reducir el espacio entre el logo y el buscador */
+    margin-left: -10px; /* Mueve el logo más a la izquierda */
+}
+
+/* Contenedor del buscador */
+.searchbox-v2 {
+    float: left; /* Flota el contenedor del buscador a la izquierda */
+    width: calc(100% - 200px); /* Aumenta el ancho disponible del buscador */
+    max-width: 600px; /* Máximo ancho para el buscador */
+    margin-top: 60px; /* Ajusta el margen superior para subir el buscador un poco más */
+}
+
+/* Barra de búsqueda */
+.searchbox-v2 input[type="search"] {
+    float: left; /* Flota el campo de búsqueda a la izquierda */
+    width: calc(100% - 60px); /* Ajusta el ancho del campo de búsqueda */
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 25px 0 0 25px; /* Borde redondeado a la izquierda */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra añadida */
+    outline: none; /* Elimina el borde azul en los navegadores que lo soportan */
+}
+
+.searchbox-v2 button {
+    float: left; /* Flota el botón a la izquierda */
+    width: 60px; /* Ancho fijo para el botón */
+    padding: 8px;
+    background-color: #5fa0eb;
+    color: #fff;
+    border: none; /* Quita el borde */
+    border-radius: 0 25px 25px 0; /* Borde redondeado a la derecha */
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra añadida */
+    outline: none; /* Elimina el borde azul al hacer clic */
+}
+
+
+.searchbox-v2 button:focus {
+    outline: none; /* Elimina el borde azul en los navegadores que lo soportan */
+}
+
+/* Sección de resultados */
+.results {
+    margin-top: 40px; /* Mayor margen superior para separar de la barra de búsqueda */
+    padding-right: 500px; /* Añade espacio a la derecha de la sección de resultados */
+    text-align: justify; /* Justifica el texto dentro de la sección de resultados */
+}
+
+.result {
+    margin-bottom: 20px;
+    padding-right: 20px; /* Añade espacio a la derecha de cada resultado */
+}
+
+.result_title a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.result_attribution {
+    font-size: 14px;
+    color: #555;
+}
+
+.result p {
+    font-size: 16px;
+    color: #333;
+    text-align: justify; /* Justifica el texto dentro de los párrafos de los resultados */
+    margin: 0 0 10px 0; /* Ajusta el margen inferior si es necesario */
+}
+
+/* Estilo adicional para la navegación en el pie de página */
+footer {
+    background-color: #f8f9fa;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    margin-top: auto; /* Mantiene el pie de página en la parte inferior */
+}
+
+footer nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+footer nav ul li {
+    margin: 0 10px;
+}
+
+footer nav ul li a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+footer p {
+    font-size: 14px;
+    color: #c2c2c2;
+}
+
+/* Estilos de pestañas */
+.tabs {
+    border-bottom: 1px solid #ddd; /* Línea separadora debajo de las pestañas */
+    margin-bottom: 20px; /* Espacio debajo de las pestañas */
+    padding-bottom: 10px; /* Añade espacio debajo de las pestañas */
+}
+
+.tabs ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start; /* Justificar al principio (izquierda) */
+    padding: 0;
+    margin: 0 0 0 20px; /* Mueve las pestañas más a la izquierda */
+}
+
+.tabs ul li {
+    margin: 0 15px;
+}
+
+.tabs ul li a {
+    text-decoration: none;
+    color: #6a1b9a;
+    font-weight: bold;
+}
+
+.tabs ul li a:hover {
+    text-decoration: underline; /* Añade subrayado al pasar el ratón */
+}
+
+
+/* Estilo para el contenedor del icono */
+.icon-container {
+    position: absolute;
+    top: 30px; /* Ajusta según el espacio deseado */
+    right: 30px; /* Ajusta según el espacio deseado */
+}
+
+/* Estilo para el icono */
+.icon {
+    width: 60px; /* Tamaño más grande */
+    height: 60px; /* Tamaño más grande */
+    cursor: pointer;
+    vertical-align: middle; /* Ajusta la posición vertical */
+}
+
+/* Estilo para el modal en la parte lateral derecha */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px; /* Ajusta el ancho según sea necesario */
+    height: 50%;
+    background: #ffffff; /* Color de fondo más claro */
+    border-left: 3px solid #a5a5a5; /* Borde izquierdo para más estilo */
+    box-shadow: 0 0 10px rgba(0,0,0,0.2); /* Sombra para darle profundidad */
+    z-index: 1000; /* Asegúrate de que el modal esté encima de otros elementos */
+    border-radius: 8px; /* Bordes redondeados */
+    margin-top: 30px; /* Ajusta este valor para separar el contenido de la parte superior */
+    margin-right: 20px; /* Ajusta el margen derecho para separar del borde derecho */
+}
+
+/* Contenido del modal */
+.modal-content {
+    padding: 20px;
+    background-color: #ffffff; /* Color de fondo suave que complementa el verde del modal */
+    margin: 15px auto; /* Ajusta el margen para centrar el contenido */
+    border: none; /* Elimina el borde para una integración más suave */
+    border-radius: 8px; /* Bordes redondeados para el contenido del modal */
+    margin-top: 30px; /* Ajusta este valor para separar el contenido de la parte superior */
+    margin-right: 20px; /* Ajusta el margen derecho para separar del borde derecho */
+}
+
+/* Estilo para el botón de cerrar */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1100; /* Asegúrate de que el botón de cerrar esté encima del contenido */
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+
+/* Estilo para la foto de perfil */
+.profile-info {
+    text-align: center;
+    margin-bottom: 20px; /* Espacio adicional debajo de la foto */
+}
+
+.profile-photo {
+    border-radius: 50%;
+    width: 120px; /* Tamaño ligeramente más grande */
+    height: 120px; /* Tamaño ligeramente más grande */
+    object-fit: cover;
+}
+
+/* Estilo para botones y opciones */
+.settings-options button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 0px 0;
+    border: 0px solid #ddd; /* Borde ligero */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #ffffff; /* Color de fondo más claro */
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.settings-options button:hover {
+    background-color: #e0e0e0; /* Color de fondo al pasar el ratón */
+    border-color: #ccc; /* Color del borde al pasar el ratón */
+}
+
+.settings-options img {
+    width: 24px; /* Tamaño del icono */
+    height: 24px; /* Tamaño del icono */
+    margin-right: 10px; /* Espacio entre el icono y el texto */
+}
+
+/* Ajustes para el perfil y opciones */
+#profile-section {
+    display: block;
+}
+
+/*dfghjkl*/
+.results {
+    list-style-type: none;
+    padding: 0;
+}
+
+.results .result {
+    margin-bottom: 20px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination a {
+    margin: 0 25px;
+    text-decoration: none;
+    color: #007bff;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.pagination a:hover {
+    background-color: #f0f0f0;
+}
+
+.pagination a .icon {
+    width: 28px; /* Ajusta este valor para cambiar el tamaño del icono */
+    height: 28px; /* Ajusta este valor para cambiar el tamaño del icono */
+}

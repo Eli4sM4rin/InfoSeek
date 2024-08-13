@@ -1,0 +1,128 @@
+@page
+@model InfoSeeKWebApp.Pages.ResultsModel
+@{
+    Layout = null;
+}
+
+@using Microsoft.AspNetCore.Html
+@using Nest
+@using Newtonsoft.Json
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados</title>
+    <link rel="stylesheet" href="~/css/Results.css" asp-append-version="true">
+
+    <!-- Firebase App (la base de todos los SDKs de Firebase) -->
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <!-- Firebase Authentication -->
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+    <script type="module" src="~/js/firebase-config.js"></script>
+    <script type="module" src="~/js/main.js"></script>
+</head>
+
+<header style="position: relative;">
+    <div class="icon-container">
+        <img src="/css/icons/user.png" alt="Configuración" class="icon" onclick="openModal('configModal')">
+    </div>
+</header>
+
+<!-- Modal de Configuración -->
+<div id="configModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('configModal')">&times;</span>
+        
+        <!-- Sección de perfil -->
+        <div id="profile-section" style="display:none;">
+            <div class="profile-info">
+                <img id="profile-photo" src="" alt="Foto de perfil" class="profile-photo">
+                <h3 id="user-name"></h3>
+                <p id="user-email"></p>
+            </div>
+            <hr>
+            <div class="settings-options">
+                <button onclick="openSettings()"><img src="/css/icons/Conf.png" alt="Configuración"> Configuración </button>
+                <button onclick="openHistory()"><img src="/css/icons/historial.png" alt="Historial"> Historial </button>
+                <button onclick="logout()"><img src="/css/icons/logout.png" alt="Cerrar sesión"> Cerrar sesión </button>
+            </div>
+        </div>
+        
+        <!-- Opciones de autenticación -->
+        <div id="auth-options" style="display:block;">
+            <h2>Configuración de la Cuenta</h2>
+            <button onclick="openGoogleAuth()">Iniciar sesión con Google</button>
+        </div>
+    </div>
+</div>
+
+<body>
+    <main>
+        <section class="logo-search-v2">
+            <img src="/images/infoseekr.png" class="logo-v2"/>
+            <form method="get" asp-page="/Results">
+                <div class="searchbox-v2">
+                    <input type="search" name="search" placeholder="Palabra clave" value="@Model.Search" />
+                    <button type="submit">🔍</button>
+                </div>
+            </form>
+        </section>
+
+        @if (!string.IsNullOrEmpty(Model.Search))
+        {
+            <header>
+                <section class="tabs">
+                    <ul>
+                        <li><a asp-page="/Results">Todo</a></li>
+                        <li><a href="#">Imágenes</a></li>
+                        <li><a href="#">Videos</a></li>
+                    </ul>
+                </section>
+            </header>
+        }
+
+        <section class="results">
+            <ol>
+                @foreach (var match in Model.Matches)
+                {
+                    <li class="result">
+                        <h2 class="result_title"><a href="@match.Url" target="_blank">@match.Title</a></h2>
+                        <div class="result_attribution">
+                            <cite>@match.Url</cite>
+                        </div>
+                        <p>@match.Highlight</p>
+                    </li>
+                }
+            </ol>
+        </section>
+
+<section class="pagination">
+    @if (Model.PageNumber > 1)
+    {
+        <a href="@Url.Page("/Results", new { search = Model.Search, pageNumber = Model.PageNumber - 1 })">
+            <img src="/css/icons/anterior.png" alt="Anterior" class="icon">
+        </a>
+    }
+    @if (Model.PageNumber < Model.TotalPages)
+    {
+        <a href="@Url.Page("/Results", new { search = Model.Search, pageNumber = Model.PageNumber + 1 })">
+            <img src="/css/icons/siguiente.png" alt="Siguiente" class="icon">
+        </a>
+    }
+</section>
+    </main>
+    <footer>
+        <nav>
+            <ul>
+                <li><a asp-page="/Index">Inicio</a></li>
+                <li><a asp-page="/Privacy">Privacidad</a></li>
+                <li><a asp-page="/ayudaysoporte">Ayuda y soporte</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2024 - InfoSeek</p>
+    </footer>
+</body>
+</html>
